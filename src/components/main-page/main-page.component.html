@@ -3,15 +3,16 @@
     <div class="w-full md:w-64 bg-[#0a192f] text-white p-4 rounded-lg mb-4 md:mb-0 md:mr-4">
       <h2 class="text-xl font-bold mb-8">Admin Dashboard</h2>
       <ul class="space-y-4">
-        <li><a href="#" class="text-lg hover:text-gray-400">Home</a></li>
-        <li><a href="#" class="text-lg hover:text-gray-400">Settings</a></li>
-        <li><a href="#" class="text-lg hover:text-gray-400">Users</a></li>
-        <li><a href="#" class="text-lg hover:text-gray-400">Reports</a></li>
+        <li><a routerLink="/" class="text-lg hover:text-gray-400">Home</a></li>
+        <li><a routerLink="/users" class="text-lg hover:text-gray-400">Users</a></li>
+        <li><a routerLink="/requests" class="text-lg hover:text-gray-400">Requests</a></li>
+        <li><a routerLink="/settings" class="text-lg hover:text-gray-400">Settings</a></li>
       </ul>
     </div>
 
     <div class="flex-1 p-8 bg-white rounded-lg shadow-md">
-      <h1 class="text-3xl font-semibold mb-6">Information</h1>
+      <!-- <h1 class="text-3xl font-semibold mb-6">Information</h1> -->
+      <router-outlet></router-outlet> 
     </div>
   </div>
 

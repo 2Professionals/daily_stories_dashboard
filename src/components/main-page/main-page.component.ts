@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-page',
-  imports: [],
+  imports:[RouterOutlet, RouterLink],
   templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.css'
+  styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-  year:Number = new Date().getFullYear();
-  constructor(){}
+  year: number = new Date().getFullYear();
 }
