@@ -1,1 +1,60 @@
-<p>home works!</p>
+<div class="min-h-screen p-4">
+  <h2 class="text-3xl font-semibold mb-6">Main stats</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <div
+      class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between"
+    >
+      <div class="flex items-center space-x-4">
+        <div class="text-2xl text-blue-500">
+          <i class="fas fa-users-cog"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Total Users</h3>
+          <p class="text-sm text-gray-500">{{total_users}}</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between"
+    >
+      <div class="flex items-center space-x-4">
+        <div class="text-2xl text-green-500">
+          <i class="fas fa-users"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Active Users</h3>
+          <p class="text-sm text-gray-500">{{active_users}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between"
+    >
+      <div class="flex items-center space-x-4">
+        <div class="text-2xl text-red-500">
+          <i class="fas fa-user-times"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Inactive Users</h3>
+          <p class="text-sm text-gray-500">{{inactive_users}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between"
+    >
+      <div class="flex items-center space-x-4">
+        <div class="text-2xl text-yellow-500">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Admins</h3>
+          <p class="text-sm text-gray-500">{{admins_number}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
