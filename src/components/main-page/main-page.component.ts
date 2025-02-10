@@ -8,5 +8,5 @@ import { RouterOutlet, RouterLink } from '@angular/router';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-  year: number = new Date().getFullYear();
+  current_year: number = new Date().getFullYear();
 }
