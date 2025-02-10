@@ -1,3 +1,37 @@
 <div class="min-h-screen p-4">
-    <h2 class="text-3xl font-semibold mb-6">Users</h2>
+    <h2 class="text-3xl font-semibold mb-6 text-center">Users</h2>
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full border border-gray-300 shadow-lg rounded-lg">
+            <thead class="bg-gray-800 text-white">
+                <tr>
+                    <th class="px-4 py-2">ID</th>
+                    <th class="px-4 py-2">Username</th>
+                    <th class="px-4 py-2">Name</th>
+                    <th class="px-4 py-2">Lastname</th>
+                    <th class="px-4 py-2">Email</th>
+                    <th class="px-4 py-2">Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users" class="border-b border-gray-300 text-center hover:bg-gray-100">
+                    <td class="px-4 py-2">{{ user.user_id }}</td>
+                    <td class="px-4 py-2">{{ user.user_username }}</td>
+                    <td class="px-4 py-2">{{ user.user_name }}</td>
+                    <td class="px-4 py-2">{{ user.user_lastname }}</td>
+                    <td class="px-4 py-2">{{ user.user_email }}</td>
+                    <td class="px-4 py-2">{{ user.role_name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-4 flex justify-center">
+        <mat-paginator 
+            [length]="totalUsers" 
+            [pageSize]="pageSize" 
+            [pageSizeOptions]="[3,5,20,50]" 
+            (page)="onPageChange($event)">
+        </mat-paginator>
+    </div>
 </div>
