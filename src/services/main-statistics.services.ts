@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MainStatisticsService {
-  private apiUrl = 'http://localhost:3000/api/users';
+  private apiUrl = environment.backendURL;
 
   constructor(private http: HttpClient) {}
 
   getUsersStatistics(): Observable<any> {
-    return this.http.get<any>(`${this.apiUrl}/getUserStatistics`);
+    return this.http.get<any>(`${this.apiUrl}users/getUserStatistics`);
   }
 }
