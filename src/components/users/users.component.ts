@@ -15,9 +15,9 @@ import { ChangeDetectorRef } from '@angular/core';
 export class UsersComponent implements OnInit {
   users: any[] = [];
   totalUsers = 0;
-  pageSize = 5;
+  pageSize = 20;
   pageIndex = 0;
-  pageSizeOptions = [3, 5, 20, 50];
+  pageSizeOptions = [20, 50, 100];
 
   constructor(
     private usersService: UsersService,
@@ -25,7 +25,7 @@ export class UsersComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.pageSizeOptions = [3, 5, 20, 50];
+    this.pageSizeOptions = [20, 50, 100];
     this.fetchUsers();
   }
 
